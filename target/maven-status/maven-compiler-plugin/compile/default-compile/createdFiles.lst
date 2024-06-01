@@ -1,0 +1,4 @@
+com/nt/BootJpaProj04_JpaRepositoryApplication.class
+com/nt/repository/IJobSeekerRepository.class
+com/nt/entity/JobSeeker.class
+com/nt/runner/FinderMethodsTestRunner.class
