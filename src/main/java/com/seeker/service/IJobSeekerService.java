@@ -6,21 +6,21 @@ import java.util.List;
 
 public interface IJobSeekerService {
 
-    public List<JobSeeker> findByJsNameEqualsService(String name);
+    public List<JobSeeker> findByJobSeekerNameEqualsService(String name);
 
-    public List<JobSeeker> getByJsNameIsService(String name);
+    public List<JobSeeker> getByJobSeekerNameIsService(String name);
 
-    public List<JobSeeker> readByJsNameService(String name);
+    public List<JobSeeker> readByJobSeekerNameService(String name);
 
     public List<JobSeeker> findByPercentageBetweenService(double start, double end);
 
-    public List<JobSeeker> findByJsNameStartingWithService(String nameInitialChars);
+    public List<JobSeeker> findByJobSeekerNameStartingWithService(String nameInitialChars);
 
-    public List<JobSeeker> findByJsNameEndingWithIgnoreCaseService(String nameLastChars);
+    public List<JobSeeker> findByJobSeekerNameEndingWithIgnoreCaseService(String nameLastChars);
 
-    public List<JobSeeker> findByJsNameContainingIgnoreCaseService(String chars);
+    public List<JobSeeker> findByJobSeekerNameContainingIgnoreCaseService(String chars);
 
-    public List<JobSeeker> findByJsNameLikeIgnoreCaseService(String pattern);
+    public List<JobSeeker> findByJobSeekerNameLikeIgnoreCaseService(String pattern);
 
     public List<JobSeeker> findByQlfyInService(List<String> qualifications);
 

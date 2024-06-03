@@ -11,60 +11,60 @@ import java.util.List;
 public class JobSeekerServiceImpl implements IJobSeekerService{
 
     @Autowired
-    private IJobSeekerRepository jsRepo;
+    private IJobSeekerRepository jobSeekerRepository;
 
     @Override
-    public List<JobSeeker> findByJsNameEqualsService(String name) {
-           return jsRepo.findByJsNameEquals(name);
+    public List<JobSeeker> findByJobSeekerNameEqualsService(String name) {
+           return jobSeekerRepository.findByJobSeekerNameEquals(name);
     }
 
     @Override
-    public List<JobSeeker> getByJsNameIsService(String name) {
-        return jsRepo.getByJsNameIs(name);
+    public List<JobSeeker> getByJobSeekerNameIsService(String name) {
+        return jobSeekerRepository.getByJobSeekerNameIs(name);
     }
 
     @Override
-    public List<JobSeeker> readByJsNameService(String name) {
-        return jsRepo.readByJsName(name);
+    public List<JobSeeker> readByJobSeekerNameService(String name) {
+        return jobSeekerRepository.readByJobSeekerName(name);
     }
 
     @Override
     public List<JobSeeker> findByPercentageBetweenService(double start, double end) {
-        return jsRepo.findByPercentageBetween(start, end);
+        return jobSeekerRepository.findByPercentageBetween(start, end);
     }
 
     @Override
-    public List<JobSeeker> findByJsNameStartingWithService(String nameInitialChars) {
-        return jsRepo.findByJsNameStartingWith(nameInitialChars);
+    public List<JobSeeker> findByJobSeekerNameStartingWithService(String nameInitialChars) {
+        return jobSeekerRepository.findByJobSeekerNameStartingWith(nameInitialChars);
     }
 
     @Override
-    public List<JobSeeker> findByJsNameEndingWithIgnoreCaseService(String nameLastChars) {
-        return jsRepo.findByJsNameEndingWithIgnoreCase(nameLastChars);
+    public List<JobSeeker> findByJobSeekerNameEndingWithIgnoreCaseService(String nameLastChars) {
+        return jobSeekerRepository.findByJobSeekerNameEndingWithIgnoreCase(nameLastChars);
     }
 
     @Override
-    public List<JobSeeker> findByJsNameContainingIgnoreCaseService(String chars) {
-        return jsRepo.findByJsNameContainingIgnoreCase(chars);
+    public List<JobSeeker> findByJobSeekerNameContainingIgnoreCaseService(String chars) {
+        return jobSeekerRepository.findByJobSeekerNameContainingIgnoreCase(chars);
     }
 
     @Override
-    public List<JobSeeker> findByJsNameLikeIgnoreCaseService(String pattern) {
-        return jsRepo.findByJsNameLikeIgnoreCase(pattern);
+    public List<JobSeeker> findByJobSeekerNameLikeIgnoreCaseService(String pattern) {
+        return jobSeekerRepository.findByJobSeekerNameLikeIgnoreCase(pattern);
     }
 
     @Override
     public List<JobSeeker> findByQlfyInService(List<String> qualifications) {
-        return jsRepo.findByQlfyIn(qualifications);
+        return jobSeekerRepository.findByQlfyIn(qualifications);
     }
 
     @Override
     public List<JobSeeker> readByMobileNoIsNullService() {
-        return List.of();
+        return jobSeekerRepository.readByMobileNoIsNull();
     }
 
     @Override
     public List<JobSeeker> findByQlfyInOrderByQlfyAscService(List<String> qualifications) {
-        return List.of();
+        return jobSeekerRepository.findByQlfyInOrderByQlfyAsc(qualifications);
     }
 }

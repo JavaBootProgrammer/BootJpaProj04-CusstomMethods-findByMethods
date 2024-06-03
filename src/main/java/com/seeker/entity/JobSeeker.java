@@ -14,40 +14,39 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @Entity
-@Table(name="JOB_SEEKER_INFO")
+@Table(name = "JOB_SEEKER_INFO")
 @Data
 @AllArgsConstructor
 //@NoArgsConstructor
 @RequiredArgsConstructor
 public class JobSeeker {
 	@Id
-	@SequenceGenerator(name="gen1",sequenceName = "jsId_seq",initialValue = 1000,allocationSize = 1)
-	@GeneratedValue(generator = "gen1",strategy = GenerationType.SEQUENCE)
-	//@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="JS_ID")
-	private Integer jsId;
-	
-	@Column(name="JS_NAME",length =20)
+	@SequenceGenerator(name = "gen1", sequenceName = "jsId_seq", initialValue = 1000, allocationSize = 1)
+	@GeneratedValue(generator = "gen1", strategy = GenerationType.SEQUENCE)
+	// @GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "JS_ID")
+	private Integer jobSeekerID;
+
+	@Column(name = "JS_NAME", length = 20)
 	@NonNull
-	private  String  jsName;
-	
-	@Column(name="JS_QLFY",length =20)
+	private String jobSeekerName;
+
+	@Column(name = "JS_QLFY", length = 20)
 	@NonNull
-	private   String  qlfy;
-	
-	@Column(name="JS_PERCENTAGE")
+	private String qlfy;
+
+	@Column(name = "JS_PERCENTAGE")
 	@NonNull
-	private   Double   percentage;
-	
-	//@Transient
-	@Column(name="JS_CONTACT_INFO")
+	private Double percentage;
+
+	// @Transient
+	@Column(name = "JS_CONTACT_INFO")
 	@NonNull
-	private   Long    mobileNo;
-	
+	private Long mobileNo;
+
 	public JobSeeker() {
-		System.out.println("JobSeeker:: 0-param constructor::"+this.getClass()+"....."+this.getClass().getSuperclass());
+		System.out.println(
+				"JobSeeker:: 0-param constructor::" + this.getClass() + "....." + this.getClass().getSuperclass());
 	}
-	
-	
 
 }

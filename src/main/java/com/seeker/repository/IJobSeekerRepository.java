@@ -8,21 +8,20 @@ import com.seeker.entity.JobSeeker;
 
 public interface IJobSeekerRepository extends JpaRepository<JobSeeker, Integer> {
 
-     public List<JobSeeker> findByJsNameEquals(String name);
+	public List<JobSeeker> findByJobSeekerNameEquals(String name);
 
-	public List<JobSeeker> getByJsNameIs(String name);
-
-	public List<JobSeeker> readByJsName(String name);
+	public List<JobSeeker> getByJobSeekerNameIs(String name);
+	public List<JobSeeker> readByJobSeekerName(String name);
 
 	public List<JobSeeker> findByPercentageBetween(double start, double end);
 
-	public List<JobSeeker> findByJsNameStartingWith(String nameInitialChars);
+	public List<JobSeeker> findByJobSeekerNameStartingWith(String nameInitialChars);
 
-	public List<JobSeeker> findByJsNameEndingWithIgnoreCase(String nameLastChars);
+	public List<JobSeeker> findByJobSeekerNameEndingWithIgnoreCase(String nameLastChars);
 
-	public List<JobSeeker> findByJsNameContainingIgnoreCase(String chars);
+	public List<JobSeeker> findByJobSeekerNameContainingIgnoreCase(String chars);
 
-	public List<JobSeeker> findByJsNameLikeIgnoreCase(String pattern);
+	public List<JobSeeker> findByJobSeekerNameLikeIgnoreCase(String pattern);
 
 	public List<JobSeeker> findByQlfyIn(List<String> qualifications);
 
