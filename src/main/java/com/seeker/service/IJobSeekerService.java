@@ -6,25 +6,25 @@ import java.util.List;
 
 public interface IJobSeekerService {
 
-    public List<JobSeeker> findByJobSeekerNameEqualsService(String name);
+	public List<JobSeeker> findByJobSeekerNameEqualsService(String JobSeekerName);
 
-    public List<JobSeeker> getByJobSeekerNameIsService(String name);
+	public List<JobSeeker> getByJobSeekerNameIsService(String JobSeekerName);
 
-    public List<JobSeeker> readByJobSeekerNameService(String name);
+	public List<JobSeeker> readByJobSeekerNameService(String JobSeekerName);
 
-    public List<JobSeeker> findByPercentageBetweenService(double start, double end);
+	public List<JobSeeker> findByPercentageBetweenService(double start, double end);
 
-    public List<JobSeeker> findByJobSeekerNameStartingWithService(String nameInitialChars);
+	public List<JobSeeker> findByJobSeekerNameStartingWithService(String nameInitialChars);
 
-    public List<JobSeeker> findByJobSeekerNameEndingWithIgnoreCaseService(String nameLastChars);
+	public List<JobSeeker> findByJobSeekerNameEndingWithIgnoreCaseService(String nameLastChars);
 
-    public List<JobSeeker> findByJobSeekerNameContainingIgnoreCaseService(String chars);
+	public List<JobSeeker> findByJobSeekerNameContainingIgnoreCaseService(String chars);
 
-    public List<JobSeeker> findByJobSeekerNameLikeIgnoreCaseService(String pattern);
+	public List<JobSeeker> findByJobSeekerNameLikeIgnoreCaseService(String pattern);
 
-    public List<JobSeeker> findByQlfyInService(List<String> qualifications);
+	public List<JobSeeker> findByQlfyInService(List<String> qualifications);
 
-    public List<JobSeeker> readByMobileNoIsNullService();
+	public List<JobSeeker> readByMobileNoIsNullService();
 
-    public List<JobSeeker> findByQlfyInOrderByQlfyAscService(List<String> qualifications);
+	public List<JobSeeker> findByQlfyInOrderByQlfyAscService(List<String> qualifications);
 }

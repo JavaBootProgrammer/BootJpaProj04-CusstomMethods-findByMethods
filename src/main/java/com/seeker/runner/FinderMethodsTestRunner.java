@@ -39,7 +39,8 @@ public class FinderMethodsTestRunner implements CommandLineRunner {
 
 		jobSeekerService.findByQlfyInService(List.of("B.E", "B.Sc")).forEach(System.out::println);
 		jobSeekerService.readByMobileNoIsNullService().forEach(System.out::println);
-		jobSeekerService.findByQlfyInOrderByQlfyAscService(List.of("B.E", "B.sc", "B.Tech")).forEach(System.out::println);
+		jobSeekerService.findByQlfyInOrderByQlfyAscService(List.of("B.E", "B.sc", "B.Tech"))
+				.forEach(System.out::println);
 
 	}
 

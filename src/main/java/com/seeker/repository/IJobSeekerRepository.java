@@ -11,6 +11,7 @@ public interface IJobSeekerRepository extends JpaRepository<JobSeeker, Integer> 
 	public List<JobSeeker> findByJobSeekerNameEquals(String name);
 
 	public List<JobSeeker> getByJobSeekerNameIs(String name);
+
 	public List<JobSeeker> readByJobSeekerName(String name);
 
 	public List<JobSeeker> findByPercentageBetween(double start, double end);
